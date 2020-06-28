@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^guardianecostore.co.uk$
+RewriteRule (.*) http://www.guardianecostore.co.uk/$1 [R=301,L] 
+
+redirect 301 /guardian/default.aspx /
+redirect 301 /products/green-glass/green-glass-recycled-glasses-grolsch-bottles-(2)/ /
+redirect 301 /products/2-save-energy/owl-119-wireless-energy-monitor/ /
+redirect 301 /products/pants-to-poverty/pants-to-poverty---fly-front-multi-stripe-pants-(men-s) /
+redirect 301 /products/dyson/dyson-air-multiplier /
+redirect 301 /category/groceries-and-everyday/store-cupboard/if-you-care.html /
+redirect 301 /guardian/product.aspx /
+redirect 301 /Guardian/product.aspx /
+redirect 301 /products/oneclick/intellipanel-for-televisions /
+redirect 301 /category/groceries-and-everyday/store-cupboard/if-you-care.html /
+redirect 301 /products /

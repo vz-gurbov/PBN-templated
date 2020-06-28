@@ -1,0 +1,46 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}.html -f
+	RewriteRule ^(.+)$ $1.html [L,QSA]
+
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^unfpa.ro$
+RewriteRule (.*)  http://www.unfpa.ro/$1 [R=301,L] 
+
+<IfModule mod_rewrite.c>
+	RewriteCond %{REQUEST_URI} ^/specific/url/
+	RewriteCond %{QUERY_STRING} key=value
+	RewriteRule (.*) /presa/ [R=301,L]
+</IfModule>
+
+redirect 301 /cooperare/genderong/genderobservatory/?limba=En /
+redirect 301 /materiale/studii_rapoarte / 
+redirect 301 /presa/com_presa/saisprezece /
+redirect 301 /presa/com_presa/tinerivarstnicitraditional /
+redirect 301 /presa/com_presa/asigurarisociale /
+redirect 301 /presa/com_presa/saisprezece /
+redirect 301 /presa/fotocontest /
+redirect 301 /presa/com_presa/interventieviolenta /
+redirect 301 /presa/com_presa /
+redirect 301 /CP /
+redirect 301 /imagini /
+redirect 301 /materiale /
+redirect 301 /presa/com_presa/ziuatinerilor2009 /
+redirect 301 /chestionar /
+redirect 301 /comune /
+redirect 301 /comune/SSRR2004.pdf /
+redirect 301 /materiale/studii_rapoarte/?limba=En /
+redirect 301 /presa/com_presa/niciofemeie /
+redirect 301 /presa/com_presa/violentafemei /
+redirect 301 /presa/newsletters/Romaniafamilyplanningmodel/?limba=En /
+redirect 301 /printPage.php?folder=/profil/Romania/&limba=En /
+redirect 301 /profil/Romania/?limba=En /

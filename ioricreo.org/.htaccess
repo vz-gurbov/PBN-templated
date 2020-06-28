@@ -1,0 +1,61 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}.html -f
+	RewriteRule ^(.+)$ $1.html [L,QSA]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^ioricreo.org$
+RewriteRule (.*)  http://www.ioricreo.org/$1 [R=301,L] 
+
+RewriteCond %{QUERY_STRING} ^(.*)?(?|&)?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+ioricreo+(IoRicreo)(?|&)?(.*)?$ [NC]
+RewriteRule ^/?index.html http://www.ioricreo.org?%1%2 [R=301,L]
+
+redirect 301 /2014/12/bici-sociali /
+redirect 301 /2013/03/segnalibro-origami /
+redirect 301 /2011/11/alluvione-a-genova /
+redirect 301 /2011/03/tappo-sigilla-sacchetti /
+redirect 301 /2011/10/arancia-zucca-per-halloween /
+redirect 301 /images/cestinogiornale.png /
+redirect 301 /2011/05/pianta-il-palloncino /
+redirect 301 /2012/06/gruccia-linguetta /
+redirect 301 /category/verde / 
+redirect 301 /tag/riciclare /
+redirect 301 /tag/riciclo /
+redirect 301 /2007/06/ventilatore-usb-2 /
+redirect 301 /2007/12/albero-di-natale-cd-2 /
+redirect 301 /2009/09/riutilizzare-le-infradito-rotte /
+redirect 301 /2009/09/riutilizzare-le-infradito-rotte-2 /
+redirect 301 /2010/03/fiori-uovo-2 /
+redirect 301 /2010/11/giardino-bottiglia-sottosopra /
+redirect 301 /2011/01/bottiglia-filtro /
+redirect 301 /2011/08/termometro-cellulare /
+redirect 301 /2011/11/cestino-giornale /
+redirect 301 /2012/05/flacone-palloncino /
+redirect 301 /images/alberocd.png /
+redirect 301 /images/aranciozucca.png /
+redirect 301 /images/cdportabiglietti.png /
+redirect 301 /images/condizionatorebarattolo.png /
+redirect 301 /images/diavolinafaidate.png /
+redirect 301 /images/fornellolattina.png /
+redirect 301 /images/lampadinasalata.png /
+redirect 301 /images/scaldaacquasolare.png /
+redirect 301 /2008/01/sci-slittino /
+redirect 301 /2008/02/cartone-porta-documenti-2 /
+redirect 301 /2008/10/casa-cartone /
+redirect 301 /2009/12/nastri-sottobicchiere-2 /
+redirect 301 /2010/01/gomma-slitta /
+redirect 301 /2010/02/ciabatte-bottiglia-demergenza-2 /
+redirect 301 /2010/05/palloncino-coprichiavi-2 /
+redirect 301 /2012/03/cucchiaio-candelabro /
+redirect 301 /2012/06/ri-party-2012 /
+
+
+

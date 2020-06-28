@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^fotopresidencia.cl$
+RewriteRule (.*) http://www.fotopresidencia.cl/$1 [R=301,L] 
+
+RedirectMatch 301 ^/view/(.*)$ http://fotopresidencia.cl/
+RedirectMatch 301 ^/upload/(.*)$ http://fotopresidencia.cl/
+
+redirect 301 /Default.aspx /
+
+
+
+
+
+
+

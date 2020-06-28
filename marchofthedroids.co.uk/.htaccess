@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^marchofthedroids.co.uk$
+RewriteRule (.*) http://www.marchofthedroids.co.uk/$1 [R=301,L] 
+
+RedirectMatch 301 ^/whats-on/(.*)$ http://marchofthedroids.co.uk/
+RedirectMatch 301 ^/videos/(.*)$ http://marchofthedroids.co.uk/
+RedirectMatch 301 ^/win-an-invite-to-buy-a-oneplus-one/(.*)$ http://marchofthedroids.co.uk/
+RedirectMatch 301 ^/2016/announcing-steve-kondik-of-cyanogen-as-the-keynote-speaker/(.*)$ http://marchofthedroids.co.uk/
+RedirectMatch 301 ^/2016/march-of-the-droids-2016-roundup/(.*)$ http://marchofthedroids.co.uk/
+RedirectMatch 301 ^/tickets/(.*)$ http://marchofthedroids.co.uk/
+
+
+
+

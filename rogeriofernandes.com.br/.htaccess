@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^rogeriofernandes.com.br$
+RewriteRule (.*) http://www.rogeriofernandes.com.br/$1 [R=301,L] 
+
+redirect 301 /novo /
+redirect 301 /blog /
+redirect 301 /wp-content/uploads/2011/04/Dualidade-1.jpg /
+redirect 301 /wp-content/uploads/2010/11/A-separação-da-alma.jpg /
+redirect 301 /index.php/produtos/capas-i-phone/fredie-mercury-capa-iphone.html /
+redirect 301 /index.php/paint-wine-night2 /
+

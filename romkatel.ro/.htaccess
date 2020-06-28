@@ -1,0 +1,73 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}.html -f
+	RewriteRule ^(.+)$ $1.html [L,QSA]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^romkatel.ro$
+RewriteRule (.*) http://www.romkatel.ro/$1 [R=301,L] 
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}.html -f
+	RewriteRule ^(.+)$ $1.html [L,QSA]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+RewriteEngine On
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^romkatel.ro$
+RewriteRule (.*) http://www.romkatel.ro/$1 [R=301,L] 
+
+redirect 301  /cataloage/pdf/eupen/RG213.pdf /
+redirect 301  /about.html /
+redirect 301  /evolutie.html /
+redirect 301  /comob.htm /
+redirect 301  /arhiva_news/download/Anritsu_Spectrum_Master_MS2720T.pdf	/
+redirect 301  /imt.html	/
+redirect 301  /octombrie.html /
+redirect 301  "/arhiva_news/download/IFS-10 Catalog.pdf"	/
+redirect 301  "/arhiva_news/download/IFS-15S Catalog.pdf" /
+redirect 301  "/arhiva_news/download/VF-15H Catalog Ver 1 1.pdf" /
+redirect 301  "/arhiva_news/download/VF-78 Catalog Ver 1 1.pdf"	/
+redirect 301  "/arhiva_news/download/spec  IFS-10.pdf" /
+redirect 301  "/arhiva_news/download/spec  IFS-15S.PDF" /	
+redirect 301  "/arhiva_news/download/spec  VF-15H.PDF" /	
+redirect 301  "/arhiva_news/download/spec  VF-78.pdf" /
+redirect 301  /cataloage/pdf/eupen/RG214.pdf /	
+redirect 301  /en_index.html /
+redirect 301  /arhiva_news/download/MT9083x2_Fiber_Visualizer_Leaflet_EL1100.pdf /	
+redirect 301  /arhiva_news/img/IFS-15S.jpg	/
+redirect 301  /arhiva_news/img/a86_CP500.jpg /	
+redirect 301  /arhiva_news/img/a90_anritsu.jpg /	
+redirect 301  /arhiva_news/img/a96_anritsu.jpg	/
+redirect 301  /arhiva_news/img/b07_anr2.jpg	/
+redirect 301  /broadcasting	/
+redirect 301  /calibrare.html /
+redirect 301  "/cataloage/pdf/Axell3009D_ revB.pdf" /	
+redirect 301  /menu/secundar/desprenoi /
+redirect 301  "/newsletter/81/K-Bow Imola 99812774.pdf" /	

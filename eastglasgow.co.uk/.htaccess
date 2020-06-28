@@ -1,0 +1,38 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+
+RewriteEngine On
+ErrorDocument 404 /404
+
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^eastglasgow.co.uk$
+RewriteRule (.*) http://www.eastglasgow.co.uk/$1 [R=301,L] 
+
+RedirectMatch 301 ^/community/(.*)$ http://www.eastglasgow.co.uk
+RedirectMatch 301 ^/Pathfinder/(.*)$ http://www.eastglasgow.co.uk
+RedirectMatch 301 ^/images/(.*)$ http://www.eastglasgow.co.uk
+RedirectMatch 301 ^/learning/(.*)$ http://www.eastglasgow.co.uk
+RedirectMatch 301 ^/youngvoices(.*)$ http://www.eastglasgow.co.uk
+RedirectMatch 301 ^/youthbank/(.*)$ http://www.eastglasgow.co.uk
+RedirectMatch 301 ^/provanhall/(.*)$ http://www.eastglasgow.co.uk
+RedirectMatch 301 ^/arts_culture/(.*)$ http://www.eastglasgow.co.uk
+
+
+
+
+
+
+
+
+
+
+
+
+
